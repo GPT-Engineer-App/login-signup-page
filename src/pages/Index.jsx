@@ -64,6 +64,11 @@ const Index = () => {
     }
   };
 
+  if (localStorage.getItem("accessToken")) {
+    window.location.href = "/todo";
+    return null;
+  }
+
   return (
     <Box maxWidth="400px" margin="auto" mt={8}>
       <Heading as="h1" mb={8} textAlign="center">
